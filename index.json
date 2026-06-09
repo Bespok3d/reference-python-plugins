@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "name": "Reference Python Plugins",
+  "publisher": "PLACEHOLDER",
+  "updated": "2026-06-09",
+  "plugins": [
+    {
+      "name": "print-time-human",
+      "title": "Print Time (Human)",
+      "version": "0.1.0",
+      "description": "Adds a PRINT_TIME_HUMAN G-code command that reports the current print's elapsed time in plain words (\"2 hours\", \"a minute\"). It is the reference plugin for a Klipper extra that needs a third-party Python library (humanize): the library is baked into the plugin's own dir at build time and made importable by the extra's own sys.path, so it is never installed into Klipper's shared interpreter (ADR-0036, the never-pip-the-system invariant).",
+      "tagline": "Elapsed print time in plain words; reference Klipper extra with its own Python dep.",
+      "category": "sensors",
+      "channel": "experiment",
+      "publisher": "PLACEHOLDER",
+      "printer_specific": false,
+      "published_at": "2026-06-09",
+      "updated_at": "2026-06-09",
+      "requires": {
+        "capabilities": [
+          "klipper-generic"
+        ]
+      },
+      "provides": [],
+      "conflicts": [],
+      "doc_url": "https://github.com/Bespok3d/reference-python-plugins/blob/main/print-time-human/doc/README.md",
+      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/442607059",
+      "min_daemon_version": "0.10.33-dev",
+      "deps": []
+    },
+    {
+      "name": "status-feed",
+      "title": "Status Feed",
+      "version": "0.1.0",
+      "description": "A small sidecar that serves a human-readable print-status summary as JSON at /status-feed/. It runs as its own Python service in a per-plugin virtual environment, so its one dependency (humanize) is fully isolated from the system, Klipper, and Moonraker interpreters.\n\nThis is the reference plugin for the declarative Python-dependency mechanism (ADR-0036): the manifest declares its dependency as data and the daemon provisions and tears down the venv.",
+      "tagline": "Human-readable printer status as a JSON feed.",
+      "category": "sensors",
+      "channel": "experiment",
+      "publisher": "PLACEHOLDER",
+      "printer_specific": false,
+      "published_at": "2026-06-08",
+      "updated_at": "2026-06-08",
+      "requires": {
+        "capabilities": [
+          "klipper-generic"
+        ]
+      },
+      "provides": [
+        "status-feed-service"
+      ],
+      "conflicts": [],
+      "doc_url": "https://github.com/Bespok3d/reference-python-plugins/blob/main/status-feed/doc/README.md",
+      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/442607096",
+      "min_daemon_version": "0.10.33-dev",
+      "endpoints": [
+        {
+          "label": "Status feed",
+          "path": "/status-feed/"
+        }
+      ],
+      "deps": []
+    }
+  ],
+  "lists": []
+}
