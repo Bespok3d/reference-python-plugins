@@ -1,0 +1,7 @@
+# Build outputs, never committed. The published sub-list (index.json at the repo root) IS committed.
+dist/
+.DS_Store
+__pycache__/
+# Python deps are baked in CI (ADR-0036), never committed; bake-deps.sh regenerates them.
+*/files/wheels/
+*/files/site-packages/

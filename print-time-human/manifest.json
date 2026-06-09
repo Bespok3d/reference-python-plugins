@@ -1,0 +1,42 @@
+{
+  "name": "print-time-human",
+  "title": "Print Time (Human)",
+  "version": "0.1.0",
+  "description": "Adds a PRINT_TIME_HUMAN G-code command that reports the current print's elapsed time in plain words (\"2 hours\", \"a minute\"). It is the reference plugin for a Klipper extra that needs a third-party Python library (humanize): the library is baked into the plugin's own dir at build time and made importable by the extra's own sys.path, so it is never installed into Klipper's shared interpreter (ADR-0036, the never-pip-the-system invariant).",
+  "tagline": "Elapsed print time in plain words; reference Klipper extra with its own Python dep.",
+  "category": "sensors",
+  "channel": "experiment",
+  "printer_specific": false,
+  "published_at": "2026-06-09",
+  "updated_at": "2026-06-09",
+  "min_daemon_version": "0.10.33-dev",
+  "source": "https://github.com/Bespok3d/klipper-print-time-human",
+  "publisher": "PLACEHOLDER",
+  "provides": [],
+  "require": [],
+  "conflicts": [],
+  "requires": {
+    "capabilities": [
+      "klipper-generic"
+    ],
+    "variables": []
+  },
+  "permissions": [
+    "klipper-extra",
+    "restart"
+  ],
+  "install": {
+    "place": [
+      {
+        "class": "klipper-extra",
+        "src": "files/klipper/klippy/extras/print_time_human.py"
+      }
+    ],
+    "restart": [
+      "klipper"
+    ]
+  },
+  "endpoints": [],
+  "conflict_resolutions": [],
+  "files": []
+}
