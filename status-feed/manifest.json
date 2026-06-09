@@ -7,6 +7,7 @@
   "category": "sensors",
   "channel": "experiment",
   "printer_specific": false,
+  "changelog": "doc/CHANGELOG.md",
   "published_at": "2026-06-08",
   "updated_at": "2026-06-08",
   "min_daemon_version": "0.10.33-dev",
