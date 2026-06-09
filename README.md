@@ -27,3 +27,10 @@ assembles this repo's `index.json` sub-list, and registers it in `Bespok3d/main-
 deps are CI artifacts and are gitignored; only the source is committed.
 
 > Not yet verified on a physical U1.
+## Maintainership
+
+These plugins are published and maintained by the Bespok3d org, and several of them repackage or
+build on upstream source material. If you own the source material a plugin is based on and would
+rather manage it yourself, you are welcome to contact the org to claim it back. The one condition is
+that it stays actively maintained: a claimed plugin left to rot will be reclaimed so users are never
+stranded on an abandoned package.
