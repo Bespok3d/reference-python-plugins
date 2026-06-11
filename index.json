@@ -24,7 +24,7 @@
       "provides": [],
       "conflicts": [],
       "doc_url": "https://github.com/Bespok3d/reference-python-plugins/blob/main/print-time-human/doc/README.md",
-      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/444827950",
+      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/445085662",
       "min_daemon_version": "0.10.33-dev",
       "changelog_url": "print-time-human/doc/CHANGELOG.md",
       "deps": []
@@ -51,7 +51,7 @@
       ],
       "conflicts": [],
       "doc_url": "https://github.com/Bespok3d/reference-python-plugins/blob/main/status-feed/doc/README.md",
-      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/444827978",
+      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/445085677",
       "min_daemon_version": "0.10.33-dev",
       "changelog_url": "status-feed/doc/CHANGELOG.md",
       "endpoints": [
