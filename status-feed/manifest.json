@@ -5,7 +5,7 @@
   "description": "A small sidecar that serves a human-readable print-status summary as JSON at /status-feed/. It runs as its own Python service in a per-plugin virtual environment, so its one dependency (humanize) is fully isolated from the system, Klipper, and Moonraker interpreters.\n\nThis is the reference plugin for the declarative Python-dependency mechanism (ADR-0036): the manifest declares its dependency as data and the daemon provisions and tears down the venv.",
   "tagline": "Human-readable printer status as a JSON feed.",
   "category": "sensors",
-  "channel": "experiment",
+  "channel": "stable",
   "printer_specific": false,
   "changelog": "doc/CHANGELOG.md",
   "published_at": "2026-06-08",
@@ -21,16 +21,10 @@
   "require": [],
   "conflicts": [],
   "requires": {
-    "capabilities": [
-      "klipper-generic"
-    ],
+    "capabilities": ["klipper-generic"],
     "variables": []
   },
-  "permissions": [
-    "web-location",
-    "managed-service",
-    "restart"
-  ],
+  "permissions": ["web-location", "managed-service", "restart"],
   "install": {
     "place": [
       {
@@ -42,23 +36,12 @@
       {
         "name": "status-feed",
         "command": "$PLUGIN_VENV/bin/python3",
-        "args": [
-          "-u",
-          "$BESPOK3D_PLUGINS/status-feed/files/bin/status_feed.py",
-          "--bind",
-          "127.0.0.1",
-          "--port",
-          "8097"
-        ],
+        "args": ["-u", "$BESPOK3D_PLUGINS/status-feed/files/bin/status_feed.py", "--bind", "127.0.0.1", "--port", "8097"],
         "autostart": true,
-        "ports": [
-          8097
-        ]
+        "ports": [8097]
       }
     ],
-    "restart": [
-      "web"
-    ]
+    "restart": ["web"]
   },
   "endpoints": [
     {
