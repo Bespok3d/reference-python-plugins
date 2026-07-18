@@ -19,14 +19,31 @@ Both examples use a pure-Python dependency (`humanize`), so any interpreter work
 is needed. A plugin with a compiled dependency would prebuild that wheel on an arm64 runner first (see
 `u1-hw-camera`).
 
-## Build
+## Build locally
 
-CI (`.github/workflows/release.yml`) runs `scripts/bake-deps.sh` (bakes each plugin's deps by which
-requirements file it ships), then `scripts/pack.sh` (one `.b3` per `<plugin-id>/`), releases each,
-assembles this repo's `index.json` sub-list, and registers it in `Bespok3d/main-index`. The baked
-deps are CI artifacts and are gitignored; only the source is committed.
+Needs Node.js 20+. Builds run through the shared `Bespok3d/b3-builder` tool:
+
+```sh
+npm install github:Bespok3d/b3-builder
+npx b3-builder build --source ./status-feed --atom-repo Bespok3d/reference-python-plugins
+# -> dist/status-feed-<ver>.b3 + dist/status-feed.atom.json
+```
+
+Drop `--source` to build every plugin in the repo at once.
+
+The Action runs with `bake: 'true'`: a plugin that ships a `requirements.txt` or
+`klipper_requirements.txt` at its root gets its Python deps downloaded for the printer platform
+(aarch64, CPython 3.11) at build time. Pass `--bake` to do the same locally.
+
+## Releasing
+
+Bump a plugin's `manifest.json` `version` and push to `main`. CI runs the `Bespok3d/b3-builder`
+Action over the whole repo, which packs each `.b3`, cuts a release per plugin, assembles this repo's
+`index.json` sub-list as `Reference Python Plugins`, and registers it in `Bespok3d/main-index`
+(`lists/<repo>.json`). Secret: `MAIN_INDEX_TOKEN` (contents:write on main-index). Signing deferred.
 
 > Not yet verified on a physical U1.
+
 ## Maintainership
 
 These plugins are published and maintained by the Bespok3d org, and several of them repackage or

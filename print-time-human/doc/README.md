@@ -34,6 +34,8 @@ to Klipper over its API.
 ## Build
 
 ```sh
-sh scripts/fetch-deps.sh   # pip install --target the deps into files/site-packages
-sh scripts/pack.sh         # -> dist/print-time-human-<version>.b3
+npm install github:Bespok3d/b3-builder
+npx b3-builder build --source ./print-time-human --atom-repo Bespok3d/reference-python-plugins --bake
+# --bake installs klipper_requirements.txt into files/site-packages, then packs
+# -> dist/print-time-human-<version>.b3
 ```
