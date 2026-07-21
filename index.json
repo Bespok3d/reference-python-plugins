@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "Reference Python Plugins",
-  "publisher": "PLACEHOLDER",
+  "publisher": "679939555819fb5f6423dc68c4388e76bfa9b4e0",
   "updated": "2026-06-09",
   "plugins": [
     {
@@ -12,7 +12,7 @@
       "tagline": "Elapsed print time in plain words; reference Klipper extra with its own Python dep.",
       "category": "sensors",
       "channel": "stable",
-      "publisher": "PLACEHOLDER",
+      "publisher": "679939555819fb5f6423dc68c4388e76bfa9b4e0",
       "printer_specific": false,
       "published_at": "2026-06-09",
       "updated_at": "2026-06-09",
@@ -26,7 +26,7 @@
       "min_daemon_version": "0.10.33-dev",
       "changelog_url": "print-time-human/doc/CHANGELOG.md",
       "doc_url": "https://github.com/Bespok3d/reference-python-plugins/blob/main/print-time-human/doc/README.md",
-      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/481342788",
+      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/484994512",
       "deps": []
     },
     {
@@ -37,7 +37,7 @@
       "tagline": "Human-readable printer status as a JSON feed.",
       "category": "sensors",
       "channel": "stable",
-      "publisher": "PLACEHOLDER",
+      "publisher": "679939555819fb5f6423dc68c4388e76bfa9b4e0",
       "printer_specific": false,
       "published_at": "2026-06-08",
       "updated_at": "2026-06-08",
@@ -59,7 +59,7 @@
         }
       ],
       "doc_url": "https://github.com/Bespok3d/reference-python-plugins/blob/main/status-feed/doc/README.md",
-      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/481342793",
+      "download_url": "https://api.github.com/repos/Bespok3d/reference-python-plugins/releases/assets/484994561",
       "deps": []
     }
   ],
