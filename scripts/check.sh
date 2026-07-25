@@ -21,6 +21,13 @@ b3d_python_tools
 # its tests and its type checks resolve against.
 export PYTHONPATH="$REPO_ROOT/print-time-human/files/site-packages"
 
+# That vendored tree is gitignored (baked into the package at publish), so a clean checkout, which
+# is what CI gets, has no humanize: the status-feed test would importorskip it and never run,
+# leaving the gate green on an untested plugin. Provision the plugin's own declared dependency into
+# the tree PYTHONPATH resolves against so the test actually exercises the code. B3D_PY is the gate's
+# tool interpreter, provisioned by b3d_python_tools above.
+"$B3D_PY" -m pip install --quiet --target "$REPO_ROOT/print-time-human/files/site-packages" -r "$REPO_ROOT/status-feed/requirements.txt"
+
 run_check "pytest (status-feed)"  pytest_in_dir "$REPO_ROOT/status-feed" tests
 run_check "ruff (status-feed)"    ruff_in_dir "$REPO_ROOT/status-feed" files tests
 run_check "ruff (print-time-human)" ruff_in_dir "$REPO_ROOT/print-time-human" files/klipper
