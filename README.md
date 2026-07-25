@@ -1,7 +1,7 @@
 # reference-python-plugins
 
 A co-repo of small Bespok3d plugins that exist as the **reference implementation** for shipping Python
-dependencies in a plugin without ever running pip on the printer (ADR-0036). The invariant: never pip
+dependencies in a plugin without ever running pip on the printer. The invariant: never pip
 into the system, Klipper, or Moonraker interpreters. Each plugin declares its deps as a plain
 requirements file; CI bakes them into the `.b3`, and the daemon installs them offline.
 
@@ -40,7 +40,8 @@ The Action runs with `bake: 'true'`: a plugin that ships a `requirements.txt` or
 Bump a plugin's `manifest.json` `version` and push to `main`. CI runs the `Bespok3d/b3-builder`
 Action over the whole repo, which packs each `.b3`, cuts a release per plugin, assembles this repo's
 `index.json` sub-list as `Reference Python Plugins`, and registers it in `Bespok3d/main-index`
-(`lists/<repo>.json`). Secret: `MAIN_INDEX_TOKEN` (contents:write on main-index). Signing deferred.
+(`lists/<repo>.json`). Secrets: `MAIN_INDEX_TOKEN` (contents:write on main-index) and
+`REGISTRY_SIGNING_KEY` (the org registry key the `b3-builder` Action signs each `.b3` and atom with).
 
 > Not yet verified on a physical U1.
 
