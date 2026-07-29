@@ -1,5 +1,10 @@
 # reference-python-plugins
 
+[![licence](https://img.shields.io/badge/licence-AGPL--3.0-blue)](LICENSE)
+[![release](https://img.shields.io/github/v/release/Bespok3d/reference-python-plugins)](https://github.com/Bespok3d/reference-python-plugins/releases)
+![printer](https://img.shields.io/badge/printer-Snapmaker%20U1-informational)
+![stock firmware](https://img.shields.io/badge/stock%20firmware-no%20flashing-brightgreen)
+
 A co-repo of small Bespok3d plugins that exist as the **reference implementation** for shipping Python
 dependencies in a plugin without ever running pip on the printer. The invariant: never pip
 into the system, Klipper, or Moonraker interpreters. Each plugin declares its deps as a plain
@@ -43,7 +48,7 @@ Action over the whole repo, which packs each `.b3`, cuts a release per plugin, a
 (`lists/<repo>.json`). Secrets: `MAIN_INDEX_TOKEN` (contents:write on main-index) and
 `REGISTRY_SIGNING_KEY` (the org registry key the `b3-builder` Action signs each `.b3` and atom with).
 
-> Not yet verified on a physical U1.
+> Installed and running on a Snapmaker U1.
 
 ## Maintainership
 
@@ -52,3 +57,28 @@ build on upstream source material. If you own the source material a plugin is ba
 rather manage it yourself, you are welcome to contact the org to claim it back. The one condition is
 that it stays actively maintained: a claimed plugin left to rot will be reclaimed so users are never
 stranded on an abandoned package.
+
+## Licence
+
+Copyright (C) 2026 unlucio and the Bespok3d contributors
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU
+Affero General Public License as published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along with this program. If
+not, see <https://www.gnu.org/licenses/>. The full text is in [LICENSE](LICENSE).
+
+Bespok3d is a project of the Bespok3d Organisation, which is not a legal entity. Copyright is held by
+the individual authors named above.
+
+## Support this project
+
+`status-feed` is Bespok3d's own work. `print-time-human` packages software written by other people,
+and a donation here is not a donation to them.
+
+If our part saved you an afternoon, you can [buy me a coffee](https://buymeacoffee.com/unlucio).
