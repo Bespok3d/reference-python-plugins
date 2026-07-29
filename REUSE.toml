@@ -1,0 +1,15 @@
+version = 1
+
+# Every file in this repo is the project's own work. Files that carry their own SPDX header keep it;
+# `precedence = "aggregate"` means this block only fills in the ones that do not, which is the
+# documentation, the templates, the generated index and the plugin payload trees.
+#
+# `LICENSES/MIT.txt` covers humanize, pinned in the two requirements files and fetched at build time.
+# It is not in this repo, so no file here carries an MIT tag and `reuse lint` reports MIT as unused.
+# The text stays because the built package conveys humanize and must carry its licence.
+
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright (C) 2026 unlucio and the Bespok3d contributors"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
