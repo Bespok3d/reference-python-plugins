@@ -45,5 +45,7 @@
   },
   "endpoints": [],
   "conflict_resolutions": [],
-  "files": []
+  "files": [],
+  "license": "https://github.com/Bespok3d/reference-python-plugins/blob/dev/print-time-human/doc/LICENSE",
+  "attributions": "# Attributions - print-time-human\n\n**Plugin author:** Bespok3d, vendoring the humanize project (python-humanize), started by Jason Moiron\n\nShows remaining print time in plain words.\n\n| Upstream project | Author | Licence | Needed at runtime | Code ships in this package |\n| --- | --- | --- | --- | --- |\n| humanize | the humanize project (python-humanize), started by Jason Moiron | MIT | yes | yes |\n\n`humanize` 4.16.0 is shipped inside this plugin. Upstream:\nhttps://github.com/python-humanize/humanize\n\n## Copyright notices\n\nMIT requires the notice to travel with the code. The full licence text is in `LICENSES/MIT.txt` at\nthe root of this repo.\n\n| Component | Licence | Copyright notice, as the project states it |\n| --- | --- | --- |\n| humanize 4.16.0 | MIT | `Copyright (c) 2010-2020 Jason Moiron and Contributors` |\n\nRead from `licenses/LICENCE` inside `files/site-packages/humanize-4.16.0.dist-info/`.\n"
 }

@@ -68,5 +68,7 @@
     }
   ],
   "conflict_resolutions": [],
-  "files": []
+  "files": [],
+  "license": "https://github.com/Bespok3d/reference-python-plugins/blob/dev/status-feed/doc/LICENSE",
+  "attributions": "# Attributions - status-feed\n\n**Plugin author:** Bespok3d\n\nA reference plugin: publishes a small printer-status feed.\n\nNo third-party code ships in this package.\n"
 }
