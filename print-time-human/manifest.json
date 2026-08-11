@@ -12,7 +12,7 @@
   "published_at": "2026-06-09",
   "updated_at": "2026-06-09",
   "min_daemon_version": "0.10.33",
-  "source": "https://github.com/Bespok3d/klipper-print-time-human",
+  "source": "https://github.com/Bespok3d/reference-python-plugins",
   "publisher": "PLACEHOLDER",
   "provides": [],
   "require": [],
